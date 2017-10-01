@@ -1,0 +1,24 @@
+scrolling animation:
+https://github.com/Prinzhorn/skrollr/tree/master/examples
+https://scrollrevealjs.org/
+http://mynameismatthieu.com/WOW/
+http://johnpolacek.github.io/superscrollorama/
+http://scrollmagic.io/
+
+
+
+
+css animation:
+https://daneden.github.io/animate.css/
+
+
+
+
+slider banner:
+http://kenwheeler.github.io/slick/
+https://owlcarousel2.github.io/OwlCarousel2/
+http://darsa.in/sly/
+
+
+
+https://www.w3schools.com/code/tryit.asp?filename=FE0N8LGAD9PB

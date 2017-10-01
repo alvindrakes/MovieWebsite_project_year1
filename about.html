@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<head>
+	<title>About Us</title>
+    <style>
+		html{
+			background:url('Movie Theater.jpg');
+			background-size:1500px 600px;
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			background-color:black;
+			background-sition:center top;
+		}
+		.header {
+    		background-color: rgb(18, 16, 16);
+    		position: fixed;
+    		width: 100%;
+			top: -10px;
+    		height: 70px;
+    		padding: 0;
+    		margin: 0;
+    		z-index: 100;
+			margin-right:-20px;
+			font-family: helvetica;
+		}
+		
+		.header, .header-content {
+    		font-size: 25px;
+			left:0;
+			right:0;
+		}
+		
+		.left {
+			float: left;
+		}
+		
+		.right {
+			float: right;
+		}
+
+    	ul {
+      		list-style-type: none;
+      		padding: 10px;
+      		overflow: hidden;
+      		position: static;
+    	}
+
+    	li {
+      		display: inline-block;
+    	}
+
+    	li a {
+    		width: 200px;
+    		border-style: solid;
+    		border-width: 2px;
+    		border-color: transparent;
+      		display: inline-block;
+      		color: white;
+      		text-align: center;
+      		padding: 10px 16px;
+      		text-decoration: none;
+    	}
+
+    	li a:hover{
+      		border-color: white;
+    	}
+
+    	.bar {
+      		text-align: center;
+    	}
+		
+		.t1{
+			position:relative;
+			top:45%;
+		}
+		
+		.all{
+			position:relative;
+			background:url("black2.jpg");
+			margin-left:-10px;
+			margin-right:-8px;
+		}
+		
+		h1{
+			font-family: Geogia;
+			color: white;
+			background:transparent;
+		}
+		
+		p{
+			font-size: 22px;
+			width:750px;
+			font-family: Myriad;
+			color: white;
+			background:transparent;
+		}
+		
+		#cinema{
+			position:relative;
+			left:0;
+			right:0;
+			width:100%;
+		}
+		#logo{
+			position:relative;
+			margin:10px;
+		}
+    </style>
+	
+	<link rel="stylesheet" href="aos-master/demo/css/styles.css" />
+    <link rel="stylesheet" href="aos-master/dist/aos.css" />
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+</head>
+
+<body>
+	<ul class="bar header header-content">
+	<a href="homepage.html"><img src="logo2.png" height="85px" style="vertical-align:middle"></a>
+		<li><a href="movies.html">Movies</a></li>
+    	<li><a href="booking.php">Booking</a></li>
+    	
+    	<li><a href="about.html">About Us</a></li>
+	</ul>
+	
+	<center>
+		<p><br/></p>
+		<p><br/></p>
+		<p><br/></p>		
+		<img id="logo" src="dolby.png">
+		<img id="logo" src="reald.png">
+		<p><br/></p>
+		<img id="logo" src="imax.png">
+		<img id="logo" src="thx.png">
+		<img id="logo" src="4k.png">
+		<p><br/></p>
+		<p><br/></p>
+		<p><br/></p>
+		
+		<div id="aos-demo" class="aos-all"></div>
+
+    	<script src="aos-master/dist/aos.js"></script>
+    	<script>
+      	AOS.init({
+        easing: 'ease-in-out-sine'
+      	});
+
+      	setInterval(addItem, 300);
+		</script>
+		
+		<div class="all">
+			<p><br/></p>
+			<div data-aos="fade-up">
+				<h1>PREMIERE ZEN DISPLAY</h1>
+				<p>Almost everything you experience with the movie comes to life on our cinema's new premium display, Zen. It's where you look at the details and art of a movie. The Zen display uses the same color space as the high end digital cinema industry, so what you see will be noticeably more brilliant and vibrant, meaning that what you see on the screen is a truer representation of the world.</p>
+			</div>
+		
+			<p><br/></p>
+			<p><br/></p>
+		
+			<div data-aos="fade-up">
+			<img id="cinema" src="cinema.jpg">
+			</div>
+		
+			<p><br/></p>
+		
+			<div data-aos="fade-up">
+				<h1>DOLBY ZEN CINEMA SOUND</h1>
+				<p>By partnering with Dolby Digital, we are able to create a one of a kind cinema sound system for you. Experience the most powerful sound and vision technologies in a cinema designed to move you deep into the story, teleport you into a world of amazement and astonishment.</p>
+			</div>
+		
+			<p><br/></p>
+			<p><br/></p>
+			<p><br/></p>
+		
+			<div data-aos="fade-up">
+			<img id="cinema" src="sound.jpg">
+			</div>
+			
+			<p><br/></p>
+	
+			<div data-aos="fade-up">
+				<h1>SERVICES AT YOUR FINGERTIP</h1>
+				<p>Special service buttons are always at you reach, giving you the luxury of having your drinks or foods served to you by our highly-trained waiters. No more unfulfilled appetite when you are enjoying your movie.</p>
+			</div>
+		
+			<p><br/></p>
+			<p><br/></p>
+			<p><br/></p>
+		
+			<div data-aos="fade-up">
+			<img id="cinema" src="food.jpg">
+			</div>
+		
+			<p><br/></p>
+		
+			<div data-aos="fade-up">
+				<img src="team.png" style="width: 155px; height: 191px;"><br/>
+				<img src="footer.png" style="width: 1350px;">
+			</div>
+		
+		</div>
+    </center>
+</body>
+</html>

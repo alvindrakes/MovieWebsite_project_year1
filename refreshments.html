@@ -1,0 +1,749 @@
+<!DOCTYPE html lang="en">
+<head>
+	<title>Deadat28 - Refreshments</title>
+	<style>
+		* {box-sizing:border-box}
+
+		body {
+			color: white;
+			font-family: Helvetica, sans-serif;
+			background-image: url("refreshments/black2.jpg");
+			padding: 0;
+			margin: 0;
+		}
+		
+		.header {
+    		background-color: rgb(18, 16, 16);
+    		position: fixed;
+    		top: -10px;
+    		width: 100%;
+    		height: 70px;
+    		padding: 0;
+    		margin: 0;
+    		z-index: 100;
+		}
+		
+		.header, .header-content {
+    		font-size: 25px;
+		}
+		
+		.left {
+			float: left;
+		}
+		
+		.right {
+			float: right;
+		}
+
+    	ul {
+      		list-style-type: none;
+      		padding: 10px;
+      		overflow: hidden;
+      		position: static;
+    	}
+
+    	li {
+      		display: inline-block;
+    	}
+
+    	li a {
+    		width: 200px;
+    		border-style: solid;
+    		border-width: 2px;
+    		border-color: transparent;
+      		display: inline-block;
+      		padding: 10px 16px;
+      		color: white;
+      		text-align: center;
+      		text-decoration: none;
+    	}
+
+    	li a:hover{
+      		border-color: white;
+    	}
+
+    	.bar {
+      		text-align: center;
+    	}
+		
+		.mainSlideshow {
+			top: 80px;
+			height: 85%;
+			width: 100%;
+  			position: relative;
+  			margin: 0;
+  			padding: 0;
+  			margin-bottom: 5cm;
+		}
+		
+		/* Slideshow container */
+		.slideshow-container {
+  			max-width: 1000px;
+  			position: relative;
+  			margin: auto;
+		}
+		
+		.prev, .next {
+  			cursor: pointer;
+  			position: absolute;
+  			top: 40%;
+  			width: auto;
+  			margin-top: -22px;
+  			padding: 16px;
+  			color: white;
+  			font-weight: bold;
+  			font-size: 18px;
+  			transition: 0.6s ease;
+  			border-radius: 0 3px 3px 0;
+		}	
+		
+		.prev {
+			left: 0;
+			border-radius: 0 20% 20% 0;
+		}
+		
+		.next {
+  			right: 0;
+  			border-radius: 20% 0 0 20%;
+		}
+
+		.prev:hover, .next:hover {
+  			background-color: rgba(0, 0, 0, 0.5);
+		}
+		
+		.fade {
+  			-webkit-animation-name: fade;
+  			-webkit-animation-duration: 2s;
+  			animation-name: fade;
+  			animation-duration: 2s;
+		}
+		
+		@-webkit-keyframes fade {
+  			from {opacity: .4} 
+  			to {opacity: 1}
+		}
+		
+		@keyframes fade {
+  			from {opacity: .4} 
+  			to {opacity: 1}
+		}				
+		
+		.catalogue {
+			display: inline-block;
+			width: 450px;
+			height: 350px;
+			vertical-align: top;
+			margin-left: 5%;
+		}	
+
+		.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {
+    		display: none;
+		}
+
+		.active {
+  			background-color: #4d4d4d;
+		}
+		
+		.category {
+			text-align: center;
+			width: 100%;
+			left: -10px;
+			height: 375px;
+		}
+		
+		.slideImage {
+			width: 600px;
+			height: 375px;
+			vertical-align: middle;
+		}
+		
+		.mainDesc {
+			width: 50%;
+			margin: auto;
+		}
+		
+		.desc {
+			display: block;
+		}
+		
+		.items, .items2, .items3, .items4, .items5 {
+			cursor: pointer;
+			font-size: 20px;
+		}
+		
+		.items:hover, .items2:hover, .items3:hover, .items4:hover, .items5:hover {
+			background-color: #666666;
+		}
+		
+		input[type=text] {
+			width: 20px;
+			text-align: center;
+			color: white;
+			font-size: 15px;
+			border: none;
+			background: transparent;
+		}
+		
+		input[type=button] {
+			cursor: pointer;
+		}
+		
+		#total {
+			margin: 0 2px;
+			text-align: left;
+			width: 50px;
+		}
+		
+		button {
+			font-size: 18px;
+			color: white;
+			text-decoration: none;
+			display: inline-block;
+			cursor: pointer;
+			border: none;
+			padding 15px 32px;
+			margin: 4px 2px;
+			background-color: #6d6d6d;
+			box-shadow: none;
+			appearance: none;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+	<ul class="bar header header-content">
+		<a href="homepage.html"><img src="refreshments/logo2.png" height="85px" style="vertical-align:middle"></a>
+		<li><a href="movies.html">Movies</a></li>
+		<li><a href="booking.php">Booking</a></li>
+		<li><a href="about.html">About Us</a></li>
+	</ul>
+</div>
+<div style="text-align:center">
+<div class="mainSlideshow">
+	<div class="mySlides fade"><img src="refreshments/PROMOTION.jpg" style="width:100%; height:85%"></div>
+	<div class="mySlides fade"><img src="refreshments/promotion1.jpg" style="width:100%; height:85%"></div>
+    <div class="mySlides fade"><img src="refreshments/promotion2.jpg" style="width:100%; height:85%"></div>
+    <div class="prev" onclick="plusSlides(-1)">&#10094;</div>
+  	<div class="next" onclick="plusSlides(1)">&#10095;</div>
+	<div>
+		<div class="mainDesc desc fade">
+		
+		</div>
+		<div class="mainDesc desc fade">
+			<h1>THE THREE BURGURTEERS</h1>
+			RM10.00 <button type="button" onclick='promo1(1)'>+</button>
+			<input type="text" id="promo1" readonly=true value="0">
+			<button type="button" onclick='promo1(-1)'>-</button>
+		</div>
+		<div class="mainDesc desc fade">
+			<h1>THE FURIOUS CARAMEL POPCORN</h1>
+			RM7.00 <button type='button' onclick='promo2(1);'>+</button>
+			<input type="text" id="promo2" readonly=true value="0">
+			<button type='button' onclick='promo2(-1)'>-</button>
+		</div>
+	</div>
+</div>
+</div>
+<div class="category">
+<div class="slideshow-container left" style="display:inline-block">
+	<div class="mySlides2 fade"><img src="refreshments/combo1.jpg" class="slideImage"></div>
+	<div class="mySlides2 fade"><img src="refreshments/combo2.jpg" class="slideImage"></div>
+	<div class="mySlides2 fade"><img src="refreshments/combo3.jpg" class="slideImage"></div>
+</div>
+<div class="catalogue">
+	<h1>COMBOS</h1>
+	<div style="clear:both">
+		<div class="items" onclick="currentSlide2(1)">
+			<div class="left">FUZZY POPCORN</div><div class="right">RM15.00</div><br>
+			<div class="left" style="font-size:14px">1 Regular Popcorn, 1 Fuzzy Peach & 2 Regular Pepsi</div>
+			<div class="right">
+				<button type='button' onclick='combo1(1)'>+</button>
+				<input type="text" id="combo1" readonly=true value="0">
+				<button type='button' onclick='combo1(-1)'>-</button>
+			</div>
+		</div><br><br><br>
+		<div class="items" onclick="currentSlide2(2)">
+			<div class="left">TODDLER'S TREATY</div><div class="right">RM18.00</div><br>
+			<div class="left" style="font-size:14px">1 Kid Size Popcorn, Sweets and 1 Small Beverage</div>
+			<div class="right">
+				<button type='button' onclick='combo2(1)'>+</button>
+				<input type="text" id="combo2" readonly=true value="0">
+				<button type='button' onclick='combo2(-1)'>-</button>
+			</div>
+		</div><br><br><br>
+		<div class="items" onclick="currentSlide2(3)">
+			<div class="left">BURGER OF FURY</div><div class="right">RM10.00</div><br>
+			<div class="left" style="font-size:14px">1 Fried Chicken Burger and French Fries</div>
+			<div class="right">
+				<button type='button' onclick='combo3(1)'>+</button>
+				<input type="text" id="combo3" readonly=true value="0">
+				<button type='button' onclick='combo3(-1)'>-</button>
+			</div>
+		</div><br><br><br>
+	</div>
+</div>
+</div>
+
+<div class="category">
+<div class="slideshow-container left" style="display:inline-block">
+	<div class="mySlides3 fade"><img src="refreshments/hot1.jpg" class="slideImage"></div>
+	<div class="mySlides3 fade"><img src="refreshments/hot2.jpg" class="slideImage"></div>
+	<div class="mySlides3 fade"><img src="refreshments/hot3.jpg" class="slideImage"></div>
+</div>
+<div class="catalogue">
+	<h1>FRESH & HOT</h1>
+	<div style="clear:both">
+		<div class="items2" onclick="currentSlide3(1)">
+			<div class="left">HAMBURG DELIGHT</div><div class="right">RM15.00</div><br>
+			<div class="right">
+				<button type='button' onclick='hot1(1)'>+</button>
+				<input type="text" id="hot1" readonly=true value="0">
+				<button type='button' onclick='hot1(-1)'>-</button>
+			</div>
+		</div><br><br>
+		<div class="items2" onclick="currentSlide3(2)">
+			<div class="left">CHICKEN NUGGETS</div><div class="right">RM9.00</div><br>
+			<div class="right">
+				<button type='button' onclick='hot2(1)'>+</button>
+				<input type="text" id="hot2" readonly=true value="0">
+				<button type='button' onclick='hot2(-1)'>-</button>
+			</div>
+		</div><br><br>
+		<div class="items2" onclick="currentSlide3(3)">
+			<div class="left">CHICKEN MEATBALLS</div><div class="right">RM7.00</div><br>
+			<div class="right">
+				<button type='button' onclick='hot3(1)'>+</button>
+				<input type="text" id="hot3" readonly=true value="0">
+				<button type='button' onclick='hot3(-1)'>-</button>
+			</div>
+		</div><br><br>
+	</div>
+</div>
+</div>
+
+<div class="category">
+<div class="slideshow-container left" style="display:inline-block">
+	<div class="mySlides4 fade"><img src="refreshments/drink1.jpg" class="slideImage"></div>
+	<div class="mySlides4 fade"><img src="refreshments/drink2.jpg" class="slideImage"></div>
+	<div class="mySlides4 fade"><img src="refreshments/drink3.jpg" class="slideImage"></div>
+	<div class="mySlides4 fade"><img src="refreshments/drink4.jpg" class="slideImage"></div>
+</div>
+<div class="catalogue">
+	<h1>BEVERAGES</h1>
+	<div style="clear:both">
+		<div class="items3" onclick="currentSlide4(1)">
+			<div class="left">COCA-COLA</div><div class="right">RM4.00</div><br>
+			<div class="right">
+				<button type='button' onclick='drink1(1)'>+</button>
+				<input type="text" id="drink1" readonly=true value="0">
+				<button type='button' onclick='drink1(-1)'>-</button>
+			</div>
+		</div><br><br>
+		<div class="items3" onclick="currentSlide4(2)">
+			<div class="left">SPRITE</div><div class="right">RM4.00</div><br>
+			<div class="right">
+				<button type='button' onclick='drink2(1)'>+</button>
+				<input type="text" id="drink2" readonly=true value="0">
+				<button type='button' onclick='drink2(-1)'>-</button>
+			</div>
+		</div><br><br>
+		<div class="items3" onclick="currentSlide4(3)">
+			<div class="left">EVIAN</div><div class="right">RM5.00</div><br>
+			<div class="right">
+				<button type='button' onclick='drink3(1)'>+</button>
+				<input type="text" id="drink3" readonly=true value="0">
+				<button type='button' onclick='drink3(-1)'>-</button>
+			</div>
+		</div><br><br>
+		<div class="items3" onclick="currentSlide4(4)">
+			<div class="left">TROPICANA</div><div class="right">RM2.50</div><br>
+			<div class="right">
+				<button type='button' onclick='drink4(1)'>+</button>
+				<input type="text" id="drink4" readonly=true value="0">
+				<button type='button' onclick='drink4(-1)'>-</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="category">
+<div class="slideshow-container left" style="display:inline-block">
+	<div class="mySlides5 fade"><img src="refreshments/snack1.jpg" class="slideImage"></div>
+	<div class="mySlides5 fade"><img src="refreshments/snack2.jpg" class="slideImage"></div>
+	<div class="mySlides5 fade"><img src="refreshments/snack3.jpg" class="slideImage"></div>
+</div>
+<div class="catalogue">
+	<h1>TIDBITS</h1>
+	<div style="clear:both">
+		<div class="items4" onclick="currentSlide5(1)">
+			<div class="left">SNICKERS</div><div class="right">RM4.00</div><br>
+			<div class="right">
+				<button type='button' onclick='snack1(1)'>+</button>
+				<input type="text" id="snack1" readonly=true value="0">
+				<button type='button' onclick='snack1(-1)'>-</button>
+			</div>
+		</div><br><br>
+		<div class="items4" onclick="currentSlide5(2)">
+			<div class="left">KIT KAT</div><div class="right">RM4.00</div><br>
+			<div class="right">
+				<button type='button' onclick='snack2(1)'>+</button>
+				<input type="text" id="snack2" readonly=true value="0">
+				<button type='button' onclick='snack2(-1)'>-</button>
+			</div>
+		</div><br><br>
+		<div class="items4" onclick="currentSlide5(3)">
+			<div class="left">M&M'S</div><div class="right">RM4.00</div><br>
+			<div class="right">
+				<button type='button' onclick='snack3(1)'>+</button>
+				<input type="text" id="snack3" readonly=true value="0">
+				<button type='button' onclick='snack3(-1)'>-</button>
+			</div>
+		</div><br><br>
+		<hr>
+		<div>
+			<!--<div class="left">Refreshment Total: </div>-->
+			<div class="right">
+				<!--RM<input type="text" name='total' id="total" readonly=true value='0.00'><button onclick='total()'>Check Price</button>&emsp;-->
+			<!--	<form action="checkout.php">
+					<button onclick="addToCart();">Checkout</button>
+				</form>
+				-->
+
+				<form action="checkout.php">
+			<!-- <button onclick="createTicket();">continue</button> -->
+
+                	<div class="book-btn">
+                    	<div class="row">
+                            <button  onclick="addToCart()""> Checkout </button>
+                        </div>
+                    </div>
+		</form>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<script>
+	function addToCart(){
+		var i = 0;
+		var items=new Array(15);
+		var itemID=0;
+		items[0]=document.getElementById("promo1").value;
+		items[1]=document.getElementById("promo2").value;
+		items[2]=document.getElementById("combo1").value;
+		items[3]=document.getElementById("combo2").value;
+		items[4]=document.getElementById("combo3").value;
+		items[5]=document.getElementById("hot1").value;
+		items[6]=document.getElementById("hot2").value;
+		items[7]=document.getElementById("hot3").value;
+		items[8]=document.getElementById("drink1").value;
+		items[9]=document.getElementById("drink2").value;
+		items[10]=document.getElementById("drink3").value;
+		items[11]=document.getElementById("drink4").value;
+		items[12]=document.getElementById("snack1").value;
+		items[13]=document.getElementById("snack2").value;
+		items[14]=document.getElementById("snack3").value;
+		for (i=0; i<=14; i++){
+			itemID = 101+i;
+			while (items[i]>0){
+				sendToCart(itemID);
+				items[i]--;
+			}
+		}
+	}
+	
+	function sendToCart (id){
+		var xhttp;
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				//alert(this.responseText);
+			}
+		};
+		  xhttp.open("GET", "refreshmentsTOcart.php?q="+id, true);
+		  xhttp.send();
+	}
+	var promo1_tot = 0, promo2_tot = 0, combo1_tot = 0, combo2_tot = 0, combo3_tot = 0, hot1_tot = 0, hot2_tot = 0, hot3_tot = 0, drink1_tot = 0, drink2_tot = 0, drink3_tot = 0, drink4_tot = 0, snack1_tot = 0, snack2_tot = 0, snack3_tot = 0;
+	function promo1(ud) {
+ 		var promo1 = document.getElementById("promo1");
+ 		if (ud > 0) {
+ 			promo1.value++;
+ 		} else {
+ 			promo1.value--;
+ 		}
+ 		promo1.value = Math.max(promo1.value, 0);
+ 		promo1_tot = promo1.value * 10;
+	}
+	
+	function promo2(ud) {
+ 		var promo2 = document.getElementById("promo2");
+ 		if (ud > 0) {
+ 			promo2.value++;
+ 		} else {
+ 			promo2.value--;
+ 		}
+ 		promo2.value = Math.max(promo2.value, 0);
+ 		promo2_tot = promo2.value * 7;
+	}
+	
+	function combo1(ud) {
+ 		var combo1 = document.getElementById("combo1");
+ 		if (ud > 0) {
+ 			combo1.value++;
+ 		} else {
+ 			combo1.value--;
+ 		}
+ 		combo1.value = Math.max(combo1.value, 0);
+ 		combo1_tot = combo1.value * 15;
+	}
+	
+	function combo2(ud) {
+ 		var combo2 = document.getElementById("combo2");
+ 		if (ud > 0) {
+ 			combo2.value++;
+ 		} else {
+ 			combo2.value--;
+ 		}
+ 		combo2.value = Math.max(combo2.value, 0);
+ 		combo2_tot = combo2.value * 18;
+	}
+	
+	function combo3(ud) {
+ 		var combo3 = document.getElementById("combo3");
+ 		if (ud > 0) {
+ 			combo3.value++;
+ 		} else {
+ 			combo3.value--;
+ 		}
+ 		combo3.value = Math.max(combo3.value, 0);
+ 		combo3_tot = combo3.value * 10;
+	}
+	
+	function hot1(ud) {
+ 		var hot1 = document.getElementById("hot1");
+ 		if (ud > 0) {
+ 			hot1.value++;
+ 		} else {
+ 			hot1.value--;
+ 		}
+ 		hot1.value = Math.max(hot1.value, 0);
+ 		hot1_tot = hot1.value * 15;
+	}
+	
+	function hot2(ud) {
+ 		var hot2 = document.getElementById("hot2");
+ 		if (ud > 0) {
+ 			hot2.value++;
+ 		} else {
+ 			hot2.value--;
+ 		}
+ 		hot2.value = Math.max(hot2.value, 0);
+ 		hot2_tot = hot2.value * 9;
+	}
+	
+	function hot3(ud) {
+ 		var hot3 = document.getElementById("hot3");
+ 		if (ud > 0) {
+ 			hot3.value++;
+ 		} else {
+ 			hot3.value--;
+ 		}
+ 		hot3.value = Math.max(hot3.value, 0);
+ 		hot3_tot = hot3.value * 7;
+	}
+	
+	function drink1(ud) {
+ 		var drink1 = document.getElementById("drink1");
+ 		if (ud > 0) {
+ 			drink1.value++;
+ 		} else {
+ 			drink1.value--;
+ 		}
+ 		drink1.value = Math.max(drink1.value, 0);
+ 		drink1_tot = drink1.value * 4;
+	}
+	
+	function drink2(ud) {
+ 		var drink2 = document.getElementById("drink2");
+ 		if (ud > 0) {
+ 			drink2.value++;
+ 		} else {
+ 			drink2.value--;
+ 		}
+ 		drink2.value = Math.max(drink2.value, 0);
+ 		drink2_tot = drink2.value * 4;
+	}
+	
+	function drink3(ud) {
+ 		var drink3 = document.getElementById("drink3");
+ 		if (ud > 0) {
+ 			drink3.value++;
+ 		} else {
+ 			drink3.value--;
+ 		}
+ 		drink3.value = Math.max(drink3.value, 0);
+ 		drink3_tot = drink3.value * 5;
+	}
+	
+	function drink4(ud) {
+ 		var drink4 = document.getElementById("drink4");
+ 		if (ud > 0) {
+ 			drink4.value++;
+ 		} else {
+ 			drink4.value--;
+ 		}
+ 		drink4.value = Math.max(drink4.value, 0);
+ 		drink4_tot = drink4.value * 2.5;
+	}
+	
+	function snack1(ud) {
+ 		var snack1 = document.getElementById("snack1");
+ 		if (ud > 0) {
+ 			snack1.value++;
+ 		} else {
+ 			snack1.value--;
+ 		}
+ 		snack1.value = Math.max(snack1.value, 0);
+ 		snack1_tot = snack1.value * 4;
+	}
+	
+	function snack2(ud) {
+ 		var snack2 = document.getElementById("snack2");
+ 		if (ud > 0) {
+ 			snack2.value++;
+ 		} else {
+ 			snack2.value--;
+ 		}
+ 		snack2.value = Math.max(snack2.value, 0);
+ 		snack2_tot = snack2.value * 4;
+	}
+	
+	function snack3(ud) {
+ 		var snack3 = document.getElementById("snack3");
+ 		if (ud > 0) {
+ 			snack3.value++;
+ 		} else {
+ 			snack3.value--;
+ 		}
+ 		snack3.value = Math.max(snack3.value, 0);
+ 		snack3_tot = snack3.value * 4;
+	}
+	function total() {
+		var total = document.getElementById("total"); 
+		total.value = (promo1_tot + promo2_tot + combo1_tot + combo2_tot + combo3_tot + drink1_tot + drink2_tot + drink3_tot + drink4_tot + snack1_tot + snack2_tot + snack3_tot).toFixed(2);
+	}
+
+	var slideIndex = 1, slideIndex2 = 1, slideIndex3 = 1, slideIndex4 = 1, slideIndex5 = 1;
+	showSlides(slideIndex);
+	showSlides2(slideIndex2);
+    showSlides3(slideIndex3);
+    showSlides4(slideIndex4);
+    showSlides5(slideIndex5);
+    
+	function plusSlides(n) {
+  		showSlides(slideIndex += n);
+	}
+
+    function currentSlide2(n) {
+        showSlides2(slideIndex2 = n);
+    }
+
+    function currentSlide3(n) {
+        showSlides3(slideIndex3 = n);
+    }
+
+    function currentSlide4(n) {
+        showSlides4(slideIndex4 = n);
+    }
+
+    function currentSlide5(n) {
+        showSlides5(slideIndex5 = n);
+    }
+
+	function showSlides(n) {
+  		var i;
+  		var slides = document.getElementsByClassName("mySlides");
+        var desc = document.getElementsByClassName("desc");
+        if (n == undefined) {n = slideIndex++;}
+  		if (n > slides.length) {slideIndex = 1;} 
+  		if (n < 1) {slideIndex = slides.length;}
+  		for (i = 0; i < slides.length; i++) {
+   			slides[i].style.display = "none"; 
+            desc[i].style.display = "none";   			
+  		}
+  		if (slideIndex > 3) {slideIndex = 1;}
+  		slides[slideIndex-1].style.display = "block"; 
+        desc[slideIndex-1].style.display = "block";    
+        setTimeout(showSlides, 10000);    
+	}
+
+    function showSlides2(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides2");
+        var items = document.getElementsByClassName("items");
+        if (n > slides.length) {slideIndex2 = 1}
+        if (n < 1) {slideIndex2 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < items.length; i++) {
+            items[i].className = items[i].className.replace(" active", "");
+        }
+        slides[slideIndex2-1].style.display = "block";
+        items[slideIndex2-1].className += " active";
+    }
+
+    function showSlides3(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides3");
+        var items = document.getElementsByClassName("items2");
+        if (n > slides.length) {slideIndex3 = 1}
+        if (n < 1) {slideIndex3 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < items.length; i++) {
+            items[i].className = items[i].className.replace(" active", "");
+        }
+        slides[slideIndex3-1].style.display = "block";
+        items[slideIndex3-1].className += " active";
+    }
+
+    function showSlides4(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides4");
+        var items = document.getElementsByClassName("items3");
+        if (n > slides.length) {slideIndex4 = 1}
+        if (n < 1) {slideIndex4 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < items.length; i++) {
+            items[i].className = items[i].className.replace(" active", "");
+        }
+        slides[slideIndex4-1].style.display = "block";
+        items[slideIndex4-1].className += " active";
+    }
+
+    function showSlides5(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides5");
+        var items = document.getElementsByClassName("items4");
+        if (n > slides.length) {slideIndex5 = 1}
+        if (n < 1) {slideIndex5 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < items.length; i++) {
+            items[i].className = items[i].className.replace(" active", "");
+        }
+        slides[slideIndex5-1].style.display = "block";
+        items[slideIndex5-1].className += " active";
+    }
+</script>
+</body>
+</html>
